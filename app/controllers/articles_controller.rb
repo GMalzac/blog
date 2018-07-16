@@ -1,16 +1,18 @@
 class ArticlesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  http_basic_authenticate_with name: "xyzblog_admin", password: "secret", except: [:index, :show]
 
   def index
-    @articles = Article.all
+    @articles = policy_scope(Article).order(created_at: :desc)
   end
 
   def show
+    authorize @article
   end
 
   def new
     @article = Article.new
+    authorize @article
   end
 
   def edit
@@ -18,7 +20,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-
+    authorize @article
     if @article.save
       redirect_to @article
     else
@@ -47,5 +49,6 @@ class ArticlesController < ApplicationController
 
   def set_article
     @article = Article.find(params[:id])
+    authorize @article
   end
 end

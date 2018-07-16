@@ -1,9 +1,9 @@
 <h1>Listing articles</h1>
 
-<%= link_to 'New article', new_article_path %>
+<% if policy(Article).new? %>
+  <%= link_to "New article", new_article_path %>
+<% end %>
 
-
-<%= link_to 'New article', new_article_path %>
 <table>
   <tr>
     <th>Title</th>
@@ -16,10 +16,17 @@
       <td><%= article.title %></td>
       <td><%= article.text %></td>
       <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+      <td>
+        <% if policy(Article).edit? %>
+          <%= link_to "Edit", edit_article_path(article) %>
+        <% end %>
+      </td>
+      <td>
+        <% if policy(Article).destroy? %>
+          <%= link_to 'Destroy', article_path(article),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
     </tr>
   <% end %>
 </table>
