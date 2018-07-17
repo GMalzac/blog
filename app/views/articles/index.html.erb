@@ -4,28 +4,29 @@
   <% if policy(Article).new? %>
     <%= link_to "New article", new_article_path %>
   <% end %>
+</div>
 
-  <table>
+<div class="container">
+  <div class="row">
     <% @articles.each do |article| %>
-      <h2><%= article.title %></h2>
-      <br>
-      <h3><%= article.subtitle %></h3>
-      <br>
-      <h3><%= article.text %></h3>
-      <br>
-      <%= article.created_at.strftime("%d %b %Y") %>
-      <br>
-      <%= link_to 'Show', article_path(article) %>
-      <br>
-       <% if policy(Article).edit? %>
-         <%= link_to "Edit", edit_article_path(article) %>
-       <% end %>
-       <br>
-       <% if policy(Article).destroy? %>
-         <%= link_to 'Destroy', article_path(article),
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %></td>
-         <% end %>
+      <div class="col-xs-12 col-md-6 col-lg-4">
+        <div class="article-card">
+          <h2><%= article.title %></h2><br>
+          <h3><%= article.short_subtitle %></h3><br>
+          <p><%= article.short_text %></p><br>
+          <%= "Published on " + article.created_at.strftime("%d %b %Y") %><br>
+          <%= link_to 'Show', article_path(article) %><br>
+          <% if policy(Article).edit? %>
+            <%= link_to "Edit", edit_article_path(article) %>
+          <% end %>
+          <br>
+          <% if policy(Article).destroy? %>
+            <%= link_to 'Destroy', article_path(article),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        </div>
+      </div>
     <% end %>
-  </table>
+  </div>
 </div>

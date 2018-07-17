@@ -1,36 +1,35 @@
-<%= form_with model: @article, local: true do |form| %>
+<div class="container">
+  <%= simple_form_for [@article] do |form| %>
 
-  <% if @article.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@article.errors.count, "error") %> prohibited
-        this article from being saved:
-      </h2>
-      <ul>
-        <% @article.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
+    <% if @article.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@article.errors.count, "error") %> prohibited
+          this article from being saved:
+        </h2>
+        <ul>
+          <% @article.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <p>
+      <%= form.input :title %><br>
+    </p>
+
+    <p>
+      <%= form.input :subtitle %><br>
+    </p>
+
+    <p>
+      <%= form.input :text %><br>
+    </p>
+
+    <p>
+      <%= form.submit "add an article", class: "btn btn-primary"%>
+    </p>
+
   <% end %>
-
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
-
-  <p>
-    <%= form.label :subtitle %><br>
-    <%= form.text_field :subtitle %>
-  </p>
-
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
-
-  <p>
-    <%= form.submit %>
-  </p>
-
-<% end %>
+</div>

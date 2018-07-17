@@ -1,24 +1,25 @@
+<div class="container">
+  <p>
+    <strong>Title:</strong>
+    <%= @article.title %>
+  </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+  <p>
+    <strong>Subtitle:</strong>
+    <%= @article.subtitle %>
+  </p>
 
-<p>
-  <strong>Subtitle:</strong>
-  <%= @article.subtitle %>
-</p>
+  <p>
+    <strong>Text:</strong>
+    <%= @article.text %>
+  </p>
 
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
+  <!-- <h2>Comments</h2> -->
+  <%# render @article.comments %>
 
-<!-- <h2>Comments</h2> -->
-<%# render @article.comments %>
+  <!-- <h2>Add a comment:</h2> -->
+  <%# render 'comments/form' %>
 
-<!-- <h2>Add a comment:</h2> -->
-<%# render 'comments/form' %>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+  <%= link_to 'Edit', edit_article_path(@article) %> |
+  <%= link_to 'Back', articles_path %>
+</div>
