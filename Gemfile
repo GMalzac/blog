@@ -28,6 +28,11 @@ gem 'carrierwave', '~> 1.2'
 gem 'cloudinary'
 # Use pg to deploy to heroku
 gem 'pg', '~> 0.21'
+# Gems added as a try to push to heroku
+gem 'redis'
+gem 'jquery-rails'
+gem 'autoprefixer-rails'
+gem 'webpacker'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
