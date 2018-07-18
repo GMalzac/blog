@@ -33,6 +33,8 @@ gem 'redis'
 gem 'jquery-rails'
 gem 'autoprefixer-rails'
 gem 'webpacker'
+# Use dotenv to store secret keys
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
