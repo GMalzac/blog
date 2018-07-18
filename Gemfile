@@ -26,6 +26,8 @@ gem 'ckeditor', '~> 4.1'
 gem 'carrierwave', '~> 1.2'
 # Use cloudinary to store pictures
 gem 'cloudinary'
+# Use pg to deploy to heroku
+gem 'pg', '~> 0.21'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
