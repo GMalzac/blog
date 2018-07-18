@@ -6,6 +6,8 @@ class Article < ApplicationRecord
   validates :subtitle, presence: true,
                     length: { minimum: 5 }
 
+  mount_uploader :photo, PhotoUploader
+
   def short_title
     self.title.truncate(30)
   end

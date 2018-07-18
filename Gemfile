@@ -24,6 +24,10 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'simple_form'
 # Use ckeditor as a WYSIWYG text editor
 gem 'ckeditor', '~> 4.1'
+# Use carrierwave to upload pictures
+gem 'carrierwave', '~> 1.2'
+# Use cloudinary to store pictures
+gem 'cloudinary'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

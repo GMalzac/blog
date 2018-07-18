@@ -27,6 +27,8 @@
       <%= form.input :text, :as => :ckeditor, input_html: {:ckeditor => {:toolbar => 'FULL'}}, class: "form-control" %>
     </div>
 
+    <%= form.input :photo %>
+    <%= form.input :photo_cache, as: :hidden %>
 
 
     <p>
