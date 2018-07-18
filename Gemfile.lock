@@ -134,6 +134,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
     mimemagic (0.3.2)
+    mini_magick (4.8.0)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
@@ -272,6 +273,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
+  mini_magick (~> 4.8)
   pg (~> 0.21)
   puma (~> 3.11)
   pundit
@@ -293,4 +295,4 @@ RUBY VERSION
    ruby 2.4.3p205
 
 BUNDLED WITH
-   1.16.2
+   1.16.3
