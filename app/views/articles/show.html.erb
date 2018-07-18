@@ -11,7 +11,7 @@
 
   <p>
     <strong>Text:</strong>
-    <%= @article.text %>
+    <%= raw (@article.text) %>
   </p>
 
   <!-- <h2>Comments</h2> -->
@@ -20,6 +20,8 @@
   <!-- <h2>Add a comment:</h2> -->
   <%# render 'comments/form' %>
 
-  <%= link_to 'Edit', edit_article_path(@article) %> |
+  <% if policy(Article).edit? %>
+    <%= link_to "Edit", edit_article_path(@article) %>
+  <% end %>
   <%= link_to 'Back', articles_path %>
 </div>

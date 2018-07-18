@@ -23,9 +23,11 @@
       <%= form.input :subtitle %><br>
     </p>
 
-    <p>
-      <%= form.input :text %><br>
-    </p>
+    <div class="form-group">
+      <%= form.input :text, :as => :ckeditor, input_html: {:ckeditor => {:toolbar => 'FULL'}}, class: "form-control" %>
+    </div>
+
+
 
     <p>
       <%= form.submit "add an article", class: "btn btn-primary"%>

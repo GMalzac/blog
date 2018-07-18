@@ -7,26 +7,14 @@ class Article < ApplicationRecord
                     length: { minimum: 5 }
 
   def short_title
-    if self.title.length > 30
-      self.title[0..30] + "..."
-    else
-      self.title
-    end
+    self.title.truncate(30)
   end
 
   def short_subtitle
-    if self.subtitle.length > 75
-      self.subtitle[0..75] + "..."
-    else
-      self.subtitle
-    end
+    self.subtitle.truncate(75)
   end
 
   def short_text
-    if self.text.length > 480
-      self.text[0..480] + "..."
-    else
-      self.text
-    end
+    self.text.truncate(200)
   end
 end

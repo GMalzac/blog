@@ -13,7 +13,7 @@
         <div class="article-card">
           <h2><%= article.title %></h2><br>
           <h3><%= article.short_subtitle %></h3><br>
-          <p><%= article.short_text %></p><br>
+          <p><%= raw (article.short_text) %></p><br>
           <%= "Published on " + article.created_at.strftime("%d %b %Y") %><br>
           <%= link_to 'Show', article_path(article) %><br>
           <% if policy(Article).edit? %>
