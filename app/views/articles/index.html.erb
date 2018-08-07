@@ -9,7 +9,7 @@
 
   <div class="container">
     <div class="row">
-      <% if @articles.nil? %>
+      <% if @articles == [] %>
         <h2>You haven't create any article yet!</h2>
       <% else %>
         <% @articles.each do |article| %>
