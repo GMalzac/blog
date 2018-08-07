@@ -20,8 +20,10 @@ h2 {
 h3 {
   margin-top: 0px;
   margin-bottom: 0px;
+  font-style: italic;
+  font-weight: 400;
   font-size: 19px;
-  color: rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 p {
@@ -107,7 +109,6 @@ p {
 
 // css for show page
 
-
 .banner {
   height: calc(100vh - 70px);
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
@@ -119,10 +120,14 @@ p {
 }
 
 .banner-xsmall {
-  height: 200px;
+  height: 250px;
 }
 
 .article-show-text-section {
   position: relative;
-  height: 200px;
+  height: 250px;
+  h2 {
+    font-style: italic;
+    font-weight: 400;
+  }
 }
