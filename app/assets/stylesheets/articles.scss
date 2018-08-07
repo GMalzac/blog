@@ -7,7 +7,7 @@
 h1 {
   font-size: 32px;
   font-weight: bold;
-    color: rgba(0, 0, 0, 0.85);
+  color: rgba(0, 0, 0, 0.84);
 }
 
 h2 {
@@ -25,9 +25,13 @@ h3 {
 }
 
 p {
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.7);
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.84);
 }
+
+// CSS for index page
 
 .article-card {
   margin: 10px;
@@ -53,10 +57,6 @@ p {
   }
 }
 
-.article-text-section {
-  padding: 10px 15px;
-}
-
 .article-photo {
   background-size: cover !important;
   background-position: center;
@@ -66,6 +66,13 @@ p {
   height: 200px;
 }
 
+
+.article-text-section {
+  padding: 10px 15px;
+  p {
+    font-size: 16px
+  }
+}
 
 .article-title {
   height: 50px;
@@ -86,9 +93,10 @@ p {
 }
 
 .article-published {
-  padding-top: 10px;
   height: 30px;
   color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 10px;
 }
 
 .article-actions {
@@ -98,7 +106,6 @@ p {
 
 
 // css for show page
-
 
 
 .banner {
@@ -112,5 +119,10 @@ p {
 }
 
 .banner-xsmall {
-  height: 300px;
+  height: 200px;
+}
+
+.article-show-text-section {
+  position: relative;
+  height: 200px;
 }
