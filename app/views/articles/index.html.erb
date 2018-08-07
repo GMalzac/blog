@@ -14,34 +14,33 @@
       <% else %>
         <% @articles.each do |article| %>
           <div class="col-xs-12 col-md-6 col-lg-4">
-              <div class="article-card">
-                <%= link_to article_path(article) do %>
-                <div class="article-photo" style="background-image: url('<%= cl_image_path article.photo %>');=""">
+            <div class="article-card">
+              <%= link_to article_path(article) do %>
+              <div class="article-photo" style="background-image: url('<%= cl_image_path article.photo %>');=""">
+              </div>
+              <div class="article-text-section">
+                <div class="article-title">
+                  <h2><%= article.title %></h2>
                 </div>
-                <div class="article-text-section">
-                  <div class="article-title">
-                    <h2><%= article.title %></h2>
-                  </div>
-                  <div class="article-subtitle">
-                    <h3><%= article.short_subtitle %></h3>
-                  </div>
-                  <div class="article-text">
-                    <%= raw (article.short_text) %>
-                  </div>
-                  <div class="article-published">
-                    <%= "Published on " + article.created_at.strftime("%d %b %Y") %>
-                  </div>
+                <div class="article-subtitle">
+                  <h3><%= article.short_subtitle %></h3>
+                </div>
+                <div class="article-text">
+                  <%= raw (article.short_text) %>
+                </div>
+                <div class="article-published">
+                  <%= "Published on " + article.created_at.strftime("%d %b %Y") %>
+                </div>
+              <% end %>
+              <div class="article-actions">
+                <% if policy(Article).edit? %>
+                  <%= link_to "Edit", edit_article_path(article), class: "btn btn-primary" %>
                 <% end %>
-                <div class="article-actions">
-                  <% if policy(Article).edit? %>
-                    <%= link_to "Edit", edit_article_path(article), class: "btn btn-primary" %>
-                  <% end %>
-                  <% if policy(Article).destroy? %>
-                    <%= link_to 'Destroy', article_path(article), class: "btn btn-danger",
-                          method: :delete,
-                          data: { confirm: 'Are you sure?' } %>
-                  <% end %>
-                </div>
+                <% if policy(Article).destroy? %>
+                  <%= link_to 'Destroy', article_path(article), class: "btn btn-danger",
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' } %>
+                <% end %>
               </div>
             </div>
           </div>
