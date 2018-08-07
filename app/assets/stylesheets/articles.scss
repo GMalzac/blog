@@ -1,17 +1,116 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// css for index page
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+    color: rgba(0, 0, 0, 0.85);
+}
+
 h2 {
   margin-bottom: 0px;
   font-size: 24px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.75);
 }
 
 h3 {
   margin-top: 0px;
   margin-bottom: 0px;
   font-size: 19px;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+p {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .article-card {
-  height: 400px;
+  margin: 10px;
+  align-items:center;
+  height: 550px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 4px;
+  a:link {
+    text-decoration: none;
+    color: black;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  a:active {
+    text-decoration: none;
+  }
+  p {
+    color: black
+  }
+}
+
+.article-text-section {
+  padding: 10px 15px;
+}
+
+.article-photo {
+  background-size: cover !important;
+  background-position: center;
+  border-radius: 4px 4px 0px 0px;
+  // margin: 5px 5px;
+  display: flex;
+  height: 200px;
+}
+
+
+.article-title {
+  height: 50px;
+  font-size: 0.9em;
+}
+
+.article-subtitle {
+  height: 45px;
+  padding: 5px;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.article-text {
+  height: 120px;
+  padding: 10px 10px 0px 10px;
+  font-size: 0.9em;
+}
+
+.article-published {
+  padding-top: 10px;
+  height: 30px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.article-actions {
+  padding-top: 10px;
+  height:40px;
+}
+
+
+// css for show page
+
+
+
+.banner {
+  height: calc(100vh - 70px);
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-xsmall {
+  height: 300px;
 }

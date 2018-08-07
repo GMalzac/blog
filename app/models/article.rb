@@ -13,10 +13,10 @@ class Article < ApplicationRecord
   end
 
   def short_subtitle
-    self.subtitle.truncate(75)
+    self.subtitle.truncate(63)
   end
 
   def short_text
-    self.text.truncate(200)
+    self.text.truncate(180)
   end
 end
