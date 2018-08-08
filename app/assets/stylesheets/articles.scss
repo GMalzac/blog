@@ -60,12 +60,13 @@ p {
 }
 
 .article-card:hover {
-    -webkit-transform:scale(1.01); /* Safari and Chrome */
-    -moz-transform:scale(1.01); /* Firefox */
-    -ms-transform:scale(1.01); /* IE 9 */
-    -o-transform:scale(1.01); /* Opera */
-     transform:scale(1.01);
+  -webkit-transform:scale(1.01); /* Safari and Chrome */
+  -moz-transform:scale(1.01); /* Firefox */
+  -ms-transform:scale(1.01); /* IE 9 */
+  -o-transform:scale(1.01); /* Opera */
+  transform:scale(1.01);
 }
+
 .article-photo {
   background-size: cover;
   background-position: center;
