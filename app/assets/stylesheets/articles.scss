@@ -38,7 +38,7 @@ p {
 .article-card {
   margin: 10px;
   align-items:center;
-  height: 550px;
+  height: 500px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.19);
   border-radius: 4px;
   a:link {
@@ -77,19 +77,19 @@ p {
 }
 
 .article-title {
-  height: 50px;
+  height: 80px;
   font-size: 0.9em;
 }
 
 .article-subtitle {
-  height: 45px;
+  height: 100px;
   padding: 5px;
   font-size: 0.9em;
   margin-top: 10px;
 }
 
 .article-text {
-  height: 120px;
+  height: 100px;
   padding: 10px 10px 0px 10px;
   font-size: 0.9em;
 }
@@ -102,14 +102,14 @@ p {
 }
 
 .article-actions {
-  padding-top: 10px;
+  padding: 0px 0px 0px 15px;
   height:40px;
 }
 
 
 // css for show page
 
-.banner {
+.picture {
   height: calc(100vh - 70px);
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
@@ -119,13 +119,13 @@ p {
   justify-content: center;
 }
 
-.banner-xsmall {
-  height: 250px;
+.article-show-photo{
+  height: 400px;
 }
 
 .article-show-text-section {
   position: relative;
-  height: 250px;
+  height: 400px;
   h2 {
     font-style: italic;
     font-weight: 400;

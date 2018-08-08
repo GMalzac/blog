@@ -20,13 +20,10 @@
                 </div>
                 <div class="article-text-section">
                   <div class="article-title">
-                    <h2><%= article.title %></h2>
+                    <h2><%= article.short_title %></h2>
                   </div>
                   <div class="article-subtitle">
                     <h3><%= article.short_subtitle %></h3>
-                  </div>
-                  <div class="article-text">
-                    <%= raw (article.short_text) %>
                   </div>
                   <div class="article-published">
                     <%= "Published on " + article.created_at.strftime("%d %b %Y") %>

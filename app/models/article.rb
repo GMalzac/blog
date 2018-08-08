@@ -9,11 +9,11 @@ class Article < ApplicationRecord
   mount_uploader :photo, PhotoUploader
 
   def short_title
-    self.title.truncate(30)
+    self.title.truncate(80)
   end
 
   def short_subtitle
-    self.subtitle.truncate(63)
+    self.subtitle.truncate(140)
   end
 
   def short_text
