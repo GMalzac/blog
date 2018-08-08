@@ -17,6 +17,16 @@
             <div class="article-card">
               <%= link_to article_path(article) do %>
                 <div class="article-photo" style="background-image: url('<%= cl_image_path article.photo %>');=""">
+                  <div class="article-actions">
+                    <% if policy(Article).edit? %>
+                      <%= link_to "Edit", edit_article_path(article), class: "btn btn-primary" %>
+                    <% end %>
+                    <% if policy(Article).destroy? %>
+                      <%= link_to 'Destroy', article_path(article), class: "btn btn-danger",
+                            method: :delete,
+                            data: { confirm: 'Are you sure?' } %>
+                    <% end %>
+                  </div>
                 </div>
                 <div class="article-text-section">
                   <div class="article-title">
@@ -30,16 +40,7 @@
                   </div>
                 </div>
               <% end %>
-              <div class="article-actions">
-                <% if policy(Article).edit? %>
-                  <%= link_to "Edit", edit_article_path(article), class: "btn btn-primary" %>
-                <% end %>
-                <% if policy(Article).destroy? %>
-                  <%= link_to 'Destroy', article_path(article), class: "btn btn-danger",
-                        method: :delete,
-                        data: { confirm: 'Are you sure?' } %>
-                <% end %>
-              </div>
+
             </div>
           </div>
         <% end %>
