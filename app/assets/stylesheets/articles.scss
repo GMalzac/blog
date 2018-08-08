@@ -143,4 +143,9 @@ p {
 
 .article-show-text {
   padding-top: 30px;
+  img {
+    display: flex;
+    max-width: 100%;
+    height:auto;
+  }
 }
